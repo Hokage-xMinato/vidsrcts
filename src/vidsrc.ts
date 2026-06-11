@@ -106,8 +106,8 @@ async function tmdbScrape(tmdbId: string, type: "movie" | "tv", season?: number,
     throw new Error("Invalid Data.");
   }
   const url = (type === "movie")
-    ? `https://vidsrc.net/embed/${type}?tmdb=${tmdbId}`
-    : `https://vidsrc.net/embed/${type}?tmdb=${tmdbId}&season=${season}&episode=${episode}`;
+    ? `https://vidsrcme.ru/embed/${type}?tmdb=${tmdbId}`
+    : `https://vidsrcme.ru/embed/${type}?tmdb=${tmdbId}&season=${season}&episode=${episode}`;
   const embed = await fetch(url);
   const embedResp = await embed.text();
 
